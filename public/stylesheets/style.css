@@ -1,0 +1,114 @@
+body{
+    background-color: rgb(1, 1, 29);
+    color: #ffffff;
+}
+h1{
+    text-align: center;
+}
+.container{
+    width:40%;
+    margin: 10% auto;
+}
+.main-container{
+    display: flex;
+    flex-direction: column;
+    width:60%;
+    margin: 10px auto;
+}
+
+.video-container{
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    width: 50%;
+    margin:10px auto;
+    position: relative;
+   
+}
+.call-menu{
+
+    margin:10% auto;
+}
+.answer-menu{
+    display:none;
+}
+.local-transcription,.remote-transcription{
+    position: absolute;
+    width: 200px;
+    height: 70px;
+    top: 70%;
+    color: #f6efef;
+    z-index: 2001;
+}
+.local-transcription{
+    left:5%;
+}
+.remote-transcription{
+ left: 65%;
+}
+#indexform{
+margin:20%;
+}
+.localVideo,.remoteVideo{
+    background-color: rgb(199, 194, 194);
+}
+.button-container{
+    display: flex;
+    flex-direction: row;
+    width:95%;
+    margin:10px auto;
+    column-gap: 10px;
+}
+
+.inputbox{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    width:40%;
+    margin:10px auto; 
+    padding: 2rem;
+}
+.btn-grp{
+  display:flex;
+  flex-direction: row;  
+  column-gap:5%;
+  width:100%;
+}
+h1{
+    text-align: center;
+}
+video{
+    width:250px;
+    height:250px;
+  }
+#indexform{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    width:60%;
+    margin: 10px auto;
+    justify-content: center;
+    padding: 10px;
+}
+input{
+    height:50px;
+    border-radius: 4px;
+}
+#remoteId,#gladiaId{
+    width:100%;
+}
+.answerButton,.endButton{
+    width:50%;
+    height:50px;
+    border-radius: 4px;
+    
+}
+#indexButton{
+    height:50px;
+    border-radius: 4px;
+}
+.transcription-box{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+}

@@ -1,0 +1,26 @@
+{
+  "name": "gladiaapp",
+  "version": "1.0.0",
+  "description": "A video chat app that integrate with Gladia Real Time Transcription with web socket",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Video",
+    "Chat",
+    "app",
+    "Gladia",
+    "Real",
+    "time",
+    "websocket"
+  ],
+  "author": "eyitayoit",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "peer": "^1.0.1",
+    "socket.io": "^4.7.2"
+  }
+}

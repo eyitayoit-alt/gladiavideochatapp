@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Video Chat App</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    
+  </head>
+ 
+  <body>
+    <h1>Video Chat App</h1>
+    <div class="container">
+        
+       <p><%= error %></p>
+      <form   id="indexform" method="post" action="/videochat">
+        
+        <input type='text' id='userid' name='username' placeholder='username'/>
+    
+        <button id="indexButton" type='submit'>Login</button>
+
+      </form>
+    </div>
+  </body>
+</html>
