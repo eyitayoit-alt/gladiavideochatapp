@@ -2,11 +2,11 @@
 A video chat app with automatic captions by Gladia API
 
 ## Library or Packages Used
-Gladia Transcription API
-Peer.js
-RecordRTC
-SocketIO
-Express
+- Gladia Transcription API
+- Peer.js
+- RecordRTC
+- SocketIO
+- Express
 
 ## Setting It Up
 - Install Nodejs
