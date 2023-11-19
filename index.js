@@ -48,7 +48,6 @@ io.on("connection",(socketio)=>{
         socketio.broadcast.emit("partialReceiverTranscription",transcription)
     })
     socketio.on('partialCallerTranscription',(transcription)=>{
-        console.log("caller transcription",transcription)
         socketio.broadcast.emit("partialCallerTranscription",transcription)
     })
 
