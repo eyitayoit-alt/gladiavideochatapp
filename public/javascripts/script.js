@@ -26,7 +26,7 @@ socket = new WebSocket(
 socket.onopen = () => {
     // Check https://docs.gladia.io/reference/live-audio for more information about the parameters
     const configuration = {
-      x_gladia_key: 'c164b8bf-520c-4e27-9821-77f1f1a58e03',
+      x_gladia_key: ''GLADIA_API_KEY',',
       frames_format: 'bytes',
       language:'english',
       sample_rate: SAMPLE_RATE
