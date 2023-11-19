@@ -87,27 +87,20 @@ function deferredPromise() {
 }
  // Function makeCall()
 async function  makeCall() {
-  
   const remoteId = document.querySelector('#remoteId').value
   if(id === remoteId) {
    userError.textContent="You cannot Make call to yourself"
-   
   }
   else{
-   
     navigator.mediaDevices.getUserMedia({video: true, audio:true})
    .then((stream) => {
-
-   localVideo.srcObject = stream;
-  
-  let call = peer.call(remoteId, stream);
-  call.on('stream', (remoteStream) => {
-       remoteVideo.srcObject = remoteStream;
-       
-  });
+    localVideo.srcObject = stream;
+    let call = peer.call(remoteId, stream);
+    call.on('stream', (remoteStream) => {
+       remoteVideo.srcObject = remoteStream;   
+     });
   callerAudioStream = new MediaStream(stream.getAudioTracks());
   try {
-  
     // Initializes the recorder
     recorder = new RecordRTC(callerAudioStream, {
       type: 'audio',
@@ -255,10 +248,6 @@ function stopCall(){
   remoteTracks.forEach((track) => {
     track.stop();
   });
-  
-  
-  
-  
     localSrc.getTracks().forEach((track) => track.stop());
     if (socket) {
       socket.onopen = null;
