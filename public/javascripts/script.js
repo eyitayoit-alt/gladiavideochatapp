@@ -19,8 +19,6 @@ let callerAudioStream;
 let receiverAudioStream;
 const socketPromise = deferredPromise();
 
-
-
   // Initializes the websocket
 socket = new WebSocket(
     'wss://api.gladia.io/audio/text/audio-transcription'
@@ -161,7 +159,6 @@ async function  makeCall() {
   console.log('Failed to get local stream', err);
 });
 }
-
 }
 
 peer.on('call', (call) => {
@@ -221,44 +218,31 @@ peer.on('call', (call) => {
         console.log(error)
         socket.reconnect();
       }
-  
-      recorder.startRecording();
-      
-  
-  
-    
+    recorder.startRecording(); 
    })
   
   .catch((err) => {
     console.error('Failed to get local stream', err);
   });
-
-   
 })
-function answerCall(){
 
-}
 socketio.on("receiverTranscription",(transcription)=>{
-  remoteFinalContent.textContent = " "
-  
-  remoteFinalContent.textContent = transcription 
+  remoteFinalContent.textContent = " ";
+  remoteFinalContent.textContent = transcription; 
 })
 
 socketio.on("callerTranscription",(transcription)=>{
-  remoteFinalContent.textContent = " "
-  remoteFinalContent.textContent = transcription 
+  remoteFinalContent.textContent = " ";
+  remoteFinalContent.textContent = transcription ;
   })
   socketio.on("partialReceiverTranscription",(transcription)=>{
-    remotePartialContent.textContent = " "
-    remotePartialContent.textContent = transcription 
-  })
-  
+    remotePartialContent.textContent = " ";
+    remotePartialContent.textContent = transcription; 
+  });
   socketio.on("partialCallerTranscription",(transcription)=>{
-    remotePartialContent.textContent = " "
-    remotePartialContent.textContent = transcription 
-  })
-  
-   
+    remotePartialContent.textContent = " ";
+    remotePartialContent.textContent = transcription; 
+  });
 
 function stopCall(){
   const localSrc=localVideo.srcObject
